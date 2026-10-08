@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dreamforge — AI Content Studio</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Dreamforge home"><span class="brand-icon">✦</span><span>dreamforge<small>YOUR AI CONTENT STUDIO</small></span></a>
+  <div class="workspace"><span class="avatar">D</span><div>Creator workspace<small>English · AI entertainment</small></div></div>
+  <span class="nav-label">WORKSPACE</span>
+  <nav><button class="nav active" data-view="studio">◈ <span>Content studio</span></button><button class="nav" data-view="sources">⌕ <span>Research sources</span></button><button class="nav" data-view="skills">✧ <span>Agent skills</span></button><button class="nav" data-view="settings">⚙ <span>Connections</span></button></nav>
+  <div class="sidebar-note"><span class="green-dot"></span> Four agents. One workflow.<p>Turn an idea into an original story worth watching.</p></div>
+  <div class="sidebar-bottom"><span class="avatar small">DA</span><div>Local creator<small>Private workspace</small></div></div>
+</aside>
+<main>
+  <header class="topbar"><div><span class="breadcrumb">Workspace / </span><span id="view-title">Content studio</span></div><div class="top-right"><span class="pill" id="mode-pill">Loading…</span><span class="language">EN <span class="green-dot"></span></span></div></header>
+  <section id="studio" class="view">
+    <div class="page-title"><div><span class="eyebrow">IMAGINATION, IN PRODUCTION</span><h1>Your next story starts here.</h1><p>Research the spark. Write the story. Bring it to life.</p></div><button class="button secondary" id="refresh">↻ Refresh</button></div>
+    <div id="mode-banner" class="banner"></div>
+    <div class="agent-grid">
+      <article class="agent-card"><div><span class="agent-icon mint">⌕</span><span class="step">01</span></div><h3>Trend scout</h3><p>Evidence, patterns & fresh angles</p><small>Research agent <span class="green-dot"></span></small></article>
+      <article class="agent-card"><div><span class="agent-icon lilac">✧</span><span class="step">02</span></div><h3>Story architect</h3><p>Hooks, scenes & original scripts</p><small>Content agent <span class="green-dot"></span></small></article>
+      <article class="agent-card"><div><span class="agent-icon peach">▷</span><span class="step">03</span></div><h3>Visual maker</h3><p>AI scenes, English voice & video</p><small>Production agent <span class="green-dot"></span></small></article>
+      <article class="agent-card"><div><span class="agent-icon blue">↗</span><span class="step">04</span></div><h3>Channel pilot</h3><p>Approved uploads & publish kits</p><small>Publishing agent <span class="green-dot"></span></small></article>
+    </div>
+    <div class="studio-grid">
+      <section class="panel brief-panel"><div class="panel-heading"><h2>Create a new story</h2><span class="subtle">✦</span></div><p class="muted">Give your agents a creative starting point.</p>
+        <form id="create-form"><label for="topic">Story idea or theme</label><textarea id="topic" required minlength="3" maxlength="200" rows="3" placeholder="A tiny robot discovers a forest where stars grow on trees…"></textarea>
+        <div class="prompt-chips"><button type="button" data-prompt="A tiny robot discovers a forest where stars grow on trees">✦ Tiny robot</button><button type="button" data-prompt="A floating city hidden inside a giant soap bubble">☁ Floating city</button><button type="button" data-prompt="A fox who paints the northern lights with its tail">✧ Magic fox</button></div>
+        <label for="audience">Audience</label><input id="audience" value="English-speaking viewers who enjoy imaginative AI short stories" required maxlength="300">
+        <div class="form-row"><div><label for="duration">Target length</label><select id="duration"><option value="30">30 seconds</option><option value="45" selected>45 seconds</option><option value="60">60 seconds</option></select></div><div><label>Format</label><div class="fixed-input">▯ &nbsp; 9:16 vertical</div></div></div>
+        <label>Channels</label><div class="channel-options"><label><input type="checkbox" id="youtube" checked> <span class="yt">▶</span> YouTube Shorts</label><label><input type="checkbox" id="tiktok" checked> ♪ TikTok</label></div>
+        <div class="brief-note">✧ English scripts, AI visuals and narration. Every video stops for your review.</div><button class="button primary full" type="submit" id="create-button">Generate story <span>↗</span></button>
+        <small class="cost-note" id="cost-note">Demo generation uses no paid APIs.</small></form>
+      </section>
+      <section class="panel jobs-panel"><div class="panel-heading"><h2>Production board <span id="job-count" class="count">0</span></h2><span class="subtle">Latest stories</span></div><div id="jobs-list" class="jobs-list"></div></section>
+    </div>
+    <section id="job-detail" class="panel detail-panel hidden"></section>
+  </section>
+  <section id="sources" class="view hidden"><div class="page-title"><div><span class="eyebrow">START WITH EVIDENCE</span><h1>Research sources</h1><p>Add creator links and observed metrics to guide original ideas.</p></div></div><div class="banner">YouTube research can use its API. TikTok sources are imported manually. Metadata is not a watched video; trends need repeated observations.</div><div class="studio-grid"><section class="panel"><h2>Add or update a source</h2><form id="source-form"><label>Platform</label><select id="source-platform"><option value="youtube">YouTube</option><option value="tiktok">TikTok</option></select><label>Video link</label><input id="source-url" type="url" required placeholder="https://www.tiktok.com/@creator/video/…"><label>Title</label><input id="source-title" required maxlength="300"><label>Summary / your observations</label><textarea id="source-summary" maxlength="2000" rows="3"></textarea><div class="form-row"><div><label>View count</label><input id="source-views" type="number" min="0" value="0" required></div><div><label>Published at (local time)</label><input id="source-date" type="datetime-local" required></div></div><button class="button primary full">Save source ↗</button></form></section><section class="panel"><h2>Source library</h2><div id="sources-list"></div></section></div></section>
+  <section id="skills" class="view hidden"><div class="page-title"><div><span class="eyebrow">MAKE IT YOURS</span><h1>Shape your agents</h1><p>Teach your channel's taste with instructions and performance feedback.</p></div></div><div class="banner">Research and content instructions affect future generations. Saved feedback is included in future scripts; this does not retrain model weights. Production and publishing cards describe the fixed workflow.</div><div class="skills-grid" id="skills-list"></div></section>
+  <section id="settings" class="view hidden"><div class="page-title"><div><span class="eyebrow">YOUR CREATIVE TOOLKIT</span><h1>Connections</h1><p>Configure providers in your local .env file, then restart the server.</p></div></div><div id="settings-list" class="skills-grid"></div><section class="panel"><h2>From demo to live</h2><p class="muted">Set APP_MODE=live and add an OpenAI API key to generate scripts, images and English narration. Add a YouTube API key for discovery and run scripts/connect_youtube.py for upload authorization.</p><p class="muted">TikTok supports manual export or Buffer automatic publishing. Configure Buffer and Cloudinary credentials; approved videos are uploaded to public media hosting. Select Public when queuing a Buffer post. Direct Post is not implemented for this internal tool.</p><p class="muted">Keep this app on localhost. ChatGPT Plus does not cover provider API usage. Follow docs/API_SETUP_VI.md for step-by-step credential setup.</p><a href="/docs" target="_blank" rel="noopener" class="text-link">Explore the local API ↗</a></section></section>
+  <footer>✦ Dreamforge Studio <span>Original stories. Human direction.</span></footer>
+</main>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<script src="/static/app.js"></script>
+</body></html>
