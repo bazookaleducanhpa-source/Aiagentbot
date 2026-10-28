@@ -1,0 +1,194 @@
+{
+  "scope": "D:/workspace/Aiagentbot",
+  "removed": [
+    {
+      "path": "data/remake-jobs/b12026102702/deliverables/final.pending.mp4",
+      "bytes": 67509135,
+      "reason": "Final MP4 verified and identical video packet hash; intermediate superseded after audio mux"
+    },
+    {
+      "path": "app/__pycache__/config.cpython-313.pyc",
+      "bytes": 1142,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "app/__pycache__/main.cpython-313.pyc",
+      "bytes": 23579,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "app/__pycache__/media.cpython-313.pyc",
+      "bytes": 15919,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "app/__pycache__/models.cpython-313.pyc",
+      "bytes": 5717,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "app/__pycache__/pipeline.cpython-313.pyc",
+      "bytes": 14018,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "app/__pycache__/providers.cpython-313.pyc",
+      "bytes": 25666,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "app/__pycache__/store.cpython-313.pyc",
+      "bytes": 6027,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "app/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 136,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/agents.cpython-313.pyc",
+      "bytes": 22281,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/blackholes.cpython-313.pyc",
+      "bytes": 8636,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/cli.cpython-313.pyc",
+      "bytes": 3711,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/common.cpython-313.pyc",
+      "bytes": 5611,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/delivery.cpython-313.pyc",
+      "bytes": 3440,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/pipeline.cpython-313.pyc",
+      "bytes": 22901,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/preview_batch.cpython-313.pyc",
+      "bytes": 2875,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/production.cpython-313.pyc",
+      "bytes": 20794,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/render_revision.cpython-313.pyc",
+      "bytes": 2465,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/revise_continuous.cpython-313.pyc",
+      "bytes": 4751,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/revise_host.cpython-313.pyc",
+      "bytes": 7777,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/revision_preview.cpython-313.pyc",
+      "bytes": 3017,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/seed_reference.cpython-313.pyc",
+      "bytes": 4363,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/server.cpython-313.pyc",
+      "bytes": 13059,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/sound.cpython-312.pyc",
+      "bytes": 13638,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/source.cpython-313.pyc",
+      "bytes": 7558,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/verify_render.cpython-312.pyc",
+      "bytes": 4014,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/voice.cpython-313.pyc",
+      "bytes": 12209,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 206,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "remake_studio/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 206,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "scripts/__pycache__/connect_youtube.cpython-313.pyc",
+      "bytes": 3752,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "scripts/__pycache__/tiktok_playback.cpython-313.pyc",
+      "bytes": 8851,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "tests/__pycache__/test_continuous_video.cpython-313.pyc",
+      "bytes": 11661,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "tests/__pycache__/test_remake_studio.cpython-313.pyc",
+      "bytes": 33467,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "tests/__pycache__/test_studio.cpython-313.pyc",
+      "bytes": 39469,
+      "reason": "Regenerable Python bytecode; source files retained"
+    },
+    {
+      "path": "tests/__pycache__/test_voice_direction.cpython-313.pyc",
+      "bytes": 3420,
+      "reason": "Regenerable Python bytecode; source files retained"
+    }
+  ],
+  "total_bytes": 67865471,
+  "preserved": [
+    "Delivered videos and subtitles",
+    "Source projects and voice caches",
+    "Original music and mascot assets",
+    "Installed tools, models, environments and node_modules",
+    "User documents, secrets, data and historical audit records"
+  ],
+  "git_only_exclusions": [
+    "output/",
+    "tmp/",
+    "node_modules/",
+    "local media and historical machine cleanup artifacts"
+  ]
+}

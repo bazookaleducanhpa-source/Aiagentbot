@@ -1,5 +1,31 @@
 # Dreamforge Studio
 
+## Cappy Remake Studio (local)
+
+Paste a reference video link into the separate remake workspace at **http://127.0.0.1:8010**. Start it from this project on Windows:
+
+```powershell
+./start-remake.ps1
+```
+
+The workflow creates an original English explainer with the white Cappy mascot, illustrations and animation, narration, cheerful library music and sound effects. Jobs and reusable voice caches live in `data/remake-jobs/`; the UI shows progress and available preview/export files. No external publishing is performed.
+
+To start a job from a terminal, use the project's Python environment:
+
+```powershell
+python -m remake_studio.cli "https://www.youtube.com/watch?v=0NY2gAftzJE"
+```
+
+The reusable [cappy-video-remake skill](skills/cappy-video-remake/SKILL.md) defines agent responsibilities, visual timing, provenance and QA. Its workspace helper accepts `CAPPY_WORKSPACE` when this repository is moved. Existing Dreamforge workflows below remain available on port 8000.
+
+### Source code and local production files
+
+Git contains source, dependency manifests, tests and reusable skill instructions. `output/`, `data/`, `tmp/`, `node_modules/`, `.tools/`, secrets and user-owned media remain local. Ignoring these paths does not delete them. Back up finished videos, subtitles, editable job folders, voice caches, music and mascot artwork separately.
+
+For a new checkout, install Python requirements from `requirements.txt` and `requirements-remake.txt`, then run `npm ci --prefix tools/motion-studio` for the shared Remotion runtime. The current Windows pipeline also expects the documented local FFmpeg executable and dedicated audio/model environments under `.tools/`; those installed environments and model weights are not bundled in Git. Restore the user's music library and mascot references at their documented paths before video production. Generated job projects link to the shared Node runtime instead of copying it.
+
+`scripts/build_black_hole_subtitles.py` exports external multilingual SRT files from measured narration timings; its current inputs are the local black-hole revision job and sentence translations under that video's output folder. `scripts/rebuild_black_holes_v2.py` and `scripts/preview_cappy_conversational.py` reproduce that specific revision and require its preserved local job/assets.
+
 A local AI entertainment studio: research → English story → illustrated vertical video with English narration → review → YouTube upload + TikTok publishing via Buffer (or manual kit).
 
 **Vietnamese step-by-step API guide:** [API_SETUP_VI.md](docs/API_SETUP_VI.md). Includes Google OAuth and Buffer channel helper scripts.

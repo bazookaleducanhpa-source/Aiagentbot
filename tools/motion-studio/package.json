@@ -1,0 +1,45 @@
+{
+  "name": "aiagentbot-motion-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts ToolkitDemo output/toolkit-demo.mp4",
+    "check": "tsc --noEmit",
+    "svgo": "svgo",
+    "motion-canvas": "npm --prefix motion-canvas run serve"
+  },
+  "dependencies": {
+    "@gsap/react": "2.1.2",
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "@react-three/postprocessing": "3.2.2",
+    "@react-three/rapier": "2.2.0",
+    "@remotion/captions": "4.0.537",
+    "@remotion/cli": "4.0.537",
+    "@remotion/media": "4.0.537",
+    "@remotion/three": "4.0.537",
+    "@remotion/transitions": "4.0.537",
+    "@rive-app/react-canvas": "4.37.0",
+    "animejs": "4.5.0",
+    "gsap": "3.15.0",
+    "howler": "2.2.4",
+    "mediabunny": "1.62.0",
+    "motion": "14.6.0",
+    "postprocessing": "6.39.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.537",
+    "satori": "0.63.2",
+    "svgo": "4.1.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/howler": "2.2.13",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "typescript": "7.0.2"
+  }
+}

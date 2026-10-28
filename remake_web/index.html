@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111316">
+  <title>Cappy Studio — Video Remake</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Cappy Studio trang chủ"><span class="brand-symbol">c.</span><span>Cappy<span class="brand-light">Studio</span></span></a>
+    <div class="workspace-label">KHÔNG GIAN LÀM VIỆC</div>
+    <a class="nav-item active" href="#create"><span class="nav-icon">◈</span> Remake video <span class="nav-count" id="job-count">0</span></a>
+    <a class="nav-item" href="#projects"><span class="nav-icon">▤</span> Các dự án</a>
+    <a class="nav-item" href="http://localhost:3147/TeslaArtV5" target="_blank" rel="noopener"><span class="nav-icon">↗</span> Bản mẫu Tesla</a>
+    <div class="sidebar-bottom">
+      <div class="local-badge"><span class="status-dot"></span> Chạy trên máy của bạn</div>
+      <p>Không tự đăng video.<br>Tệp và tiến độ được lưu local.</p>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb">Studio <span>/</span> <strong>Video Remake</strong></div><button class="connection" id="connection-toggle" aria-expanded="false" aria-controls="capability-panel"><span class="status-dot" id="connection-dot"></span><span id="connection-label">Đang kết nối</span><span>⌄</span></button></header>
+    <section class="capability-panel hidden" id="capability-panel" aria-label="Trạng thái công cụ"><strong>Công cụ trên máy</strong><div id="capabilities">Đang kiểm tra…</div></section>
+    <main>
+      <div class="notice hidden" id="connection-notice" role="status"></div>
+      <section class="intro" id="create">
+        <div><p class="eyebrow"><span></span> TỪ Ý TƯỞNG ĐẾN KHUNG HÌNH</p><h1>Cùng chủ đề.<br><span>Một cách kể hay hơn.</span></h1><p class="intro-copy">Dán link video. Đội ngũ agent sẽ nghiên cứu, viết lại và dựng thành một câu chuyện giàu hình ảnh — theo phong cách của bạn.</p></div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-spark a">✦</span><span class="art-spark b">✦</span><svg viewBox="0 0 300 280" class="cappy"><g stroke="#151718" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#fffef6"><path d="M110 188Q95 205 108 253Q147 264 183 250L183 185Z"/><path d="M107 195L143 226L181 192M108 195Q80 182 74 201Q87 209 108 195Q89 227 78 218Q80 202 108 195"/><path d="M109 204Q70 232 87 245M185 205Q214 229 241 196" fill="none" stroke-width="16"/><path d="M109 204Q70 232 87 245M185 205Q214 229 241 196" fill="none" stroke="#fffef6" stroke-width="9"/><path d="M64 97Q40 72 59 62Q73 56 81 79"/><path d="M53 110Q55 68 111 62Q170 57 199 78Q248 81 260 114L256 157Q243 193 184 194L100 191Q48 183 48 150Z"/><path d="M110 62L117 42M121 62L136 47M238 118L248 124L254 115M248 124V146M260 129L278 125M260 141L278 147" fill="none"/><path d="M85 120L116 114M154 115L185 109M99 118L100 126L108 125L109 117M167 114L168 122L176 121L177 113" fill="#151718"/><path d="M100 98L117 93M166 95L183 94M126 157Q146 168 166 154" fill="none"/></g></svg><span class="art-chip">YOUR STORY, REIMAGINED</span></div>
+      </section>
+
+      <section class="composer panel" aria-labelledby="composer-title">
+        <div class="section-top"><h2 id="composer-title">Bắt đầu một bản remake</h2><span class="subtle">01 — Nguồn video</span></div>
+        <form id="remake-form">
+          <label class="sr-only" for="source-url">Đường dẫn video YouTube</label>
+          <div class="url-row"><span class="link-icon" aria-hidden="true">↗</span><input id="source-url" name="url" type="url" placeholder="https://www.youtube.com/watch?v=…" autocomplete="url" required><button class="primary-button" id="create-button" type="submit" disabled><span>Tạo bản remake</span><span aria-hidden="true">→</span></button></div>
+          <div class="composer-under"><span>Nhận link YouTube. Giữ chủ đề, viết lại lời kể và cách thể hiện.</span><button class="text-button" type="button" id="use-reference">Dùng video đã chọn ↗</button></div>
+          <details class="notes-details"><summary>Thêm chỉ dẫn cho video này <span>Không bắt buộc</span></summary><label class="sr-only" for="notes">Chỉ dẫn bổ sung</label><textarea id="notes" rows="3" maxlength="6000" placeholder="Ví dụ: giải thích dễ hiểu hơn, thêm so sánh trực quan, tập trung vào phần kết…"></textarea></details>
+          <div id="form-error" class="form-error hidden" role="alert"></div>
+        </form>
+        <div class="preferences"><span class="preferences-label">PHONG CÁCH ĐÃ LƯU</span><span class="preference">English voice · Intro & CTA</span><span class="preference">Không sub</span><span class="preference">Tiêu đề phần · Tên đối tượng</span><span class="preference">Animation liền mạch, không lặp cảnh</span><span class="preference">Nét cong mềm · Mascot Cappy</span><span class="preference">Nhạc vui có sẵn</span><span class="preference">Ít joke</span></div>
+      </section>
+
+      <section class="projects-section" id="projects">
+        <div class="section-top project-heading"><div><p class="eyebrow small">ĐỘI NGŨ AGENT</p><h2>Từ link đến video hoàn chỉnh</h2></div><button class="secondary-button compact" id="refresh-button" type="button">↻ Làm mới</button></div>
+        <div class="studio-grid">
+          <section class="projects-panel panel" aria-label="Danh sách dự án"><div class="panel-heading"><h3>Dự án của bạn</h3><span id="list-count">—</span></div><div id="jobs-list" class="jobs-list" aria-live="polite"><p class="list-message">Đang tải dự án…</p></div></section>
+          <section class="detail-panel panel" id="job-detail" aria-label="Chi tiết dự án">
+            <div class="empty-detail" id="detail-empty"><span class="empty-mark">◈</span><h3>Câu chuyện tiếp theo bắt đầu từ một link</h3><p>Tạo dự án phía trên để theo dõi từng agent.<br>Tiến độ và kết quả sẽ xuất hiện tại đây.</p><div class="empty-steps"><span>Nghiên cứu</span><i>→</i><span>Kể chuyện</span><i>→</i><span>Dựng hình</span><i>→</i><span>Video</span></div></div>
+            <div id="detail-content" class="hidden">
+              <div class="detail-header"><div><span class="subtle" id="detail-id"></span><h3 id="detail-title"></h3></div><span class="status-pill" id="detail-status"></span></div>
+              <a class="source-link" id="detail-source" target="_blank" rel="noopener">Xem nguồn ↗</a>
+              <div class="progress-heading"><span id="progress-label"></span><span id="progress-number"></span></div><div class="progress-track" role="progressbar" aria-label="Tiến độ remake" aria-valuemin="0" aria-valuemax="100" id="progress-bar"><span id="progress-fill"></span></div>
+              <div class="job-error hidden" id="job-error" role="alert"></div>
+              <ol class="agent-list" id="agent-list"></ol>
+              <div id="result-area" class="result-area hidden"><div class="result-heading"><h4>Kết quả</h4><span id="result-caption"></span></div><video id="video-preview" controls preload="metadata" class="hidden" aria-label="Video remake"></video><audio id="audio-preview" controls preload="metadata" class="hidden" aria-label="Bản phối âm thanh"></audio><div id="result-links" class="result-links"></div></div>
+              <div class="detail-footer"><span id="detail-date"></span><button id="retry-button" type="button" class="secondary-button hidden">Chạy lại bước lỗi ↻</button></div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <footer class="page-footer"><span><span class="tiny-dot"></span> CAPPY STUDIO · LOCAL WORKSPACE</span><span>Hình ảnh dẫn chuyện. Giọng nói giữ nhịp.</span></footer>
+    </main>
+  </div>
+</body>
+</html>

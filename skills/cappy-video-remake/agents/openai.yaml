@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cappy Video Remake"
+  short_description: "Original illustrated videos from reference links"
+  default_prompt: "Use $cappy-video-remake to remake this video with original English narration, expressive visuals and cheerful sound."

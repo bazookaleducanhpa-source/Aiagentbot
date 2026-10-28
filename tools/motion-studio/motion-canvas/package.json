@@ -1,0 +1,24 @@
+{
+  "name": "aiagentbot-motion-canvas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vite --host 127.0.0.1",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@motion-canvas/2d": "3.17.2",
+    "@motion-canvas/core": "3.17.2",
+    "@motion-canvas/ffmpeg": "3.17.2",
+    "@motion-canvas/ui": "3.17.2",
+    "@motion-canvas/vite-plugin": "3.17.2",
+    "typescript": "7.0.2",
+    "vite": "5.4.21"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "^0.9.12",
+    "vite": {
+      "esbuild": "^0.25.12"
+    }
+  }
+}

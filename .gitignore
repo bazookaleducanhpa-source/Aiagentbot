@@ -5,3 +5,22 @@ __pycache__/
 data/
 .pytest_cache/
 .tools/
+
+# Generated films, job exports, local experiments and runtime dependencies.
+/output/
+/tmp/
+node_modules/
+.venv*/
+*.log
+
+# User-owned media and documents stay local.
+/assets/music/*.mp3
+/docs/*.mp3
+/Ho-so-vu-an-Conan-Phan-1/
+
+# Historical machine-specific cleanup reports and one-off execution helpers.
+/docs/cleanup-*.json
+/docs/cleanup-inventory.py
+/docs/execute-audited-cleanup.py
+/docs/finish-audited-cleanup.py
+/tools/motion-studio/installation-report.json
